@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:orientation="vertical"
+            android:background="@color/bg_color_F5F6F7"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:textColor="@color/color_text_2A2A2A"
+                android:fontFamily="sans-serif-black"
+                tools:text="20"
+                android:text="20"
+                android:lineSpacingExtra="1.2sp"
+                android:textSize="@dimen/text_size_96"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text_556799"
+                android:gravity="center"
+                tools:text="Banglore"
+                android:text="Banglore"
+                android:lineSpacingExtra="1.2sp"
+                android:fontFamily="sans-serif-thin"
+                android:textSize="@dimen/text_size_36"/>
+    </LinearLayout>
+    <include
+            layout="@layout/layout_bottomsheet_temperature"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
