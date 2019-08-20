@@ -58,7 +58,8 @@ class GpsUtils(private val context: Context?) {
                                 // Show the dialog by calling startResolutionForResult(), and check the
                                 // result in onActivityResult().
                                 val rae = e as ResolvableApiException
-                                rae.startResolutionForResult(context,Constants.GPS_REQUEST)
+                                rae.startResolutionForResult(context,Constants.GPS_REQUEST
+                                )
                             } catch (sie: IntentSender.SendIntentException) {
                                 Logger.d("PendingIntent unable to execute request.")
                             }

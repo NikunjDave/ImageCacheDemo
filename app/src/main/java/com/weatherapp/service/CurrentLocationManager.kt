@@ -53,10 +53,11 @@ class CurrentLocationManager private constructor(appContext: Context) : LiveData
     }
 
     private fun createLocationRequest() {
-        mLocationRequest = LocationRequest()
-        mLocationRequest?.setInterval(10000)
-        mLocationRequest?.setFastestInterval(5000)
-        mLocationRequest?.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+        mLocationRequest =
+            LocationRequest()
+        mLocationRequest?.interval = 10000
+        mLocationRequest?.fastestInterval = 5000
+        mLocationRequest?.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
     }
 
     protected override fun onInactive() {

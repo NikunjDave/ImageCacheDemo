@@ -22,19 +22,19 @@ open class BaseFragment : Fragment() {
     }
 
 
-
-
     /**
      * Shows a [Snackbar].
      * @param mainTextStringId The id for the string resource for the Snackbar text.
      * @param actionStringId   The text of the action item.
      * @param listener         The listener associated with the Snackbar action.
      */
-     fun showSnackbar(message : String, listener: View.OnClickListener ?
+    fun showSnackbar(
+        message: String, listener: View.OnClickListener?
     ) {
-        Snackbar.make(mActivity.findViewById(android.R.id.content),message,
-            Snackbar.LENGTH_INDEFINITE)
-            .setAction(getString( android.R.string.ok), listener)
+        Snackbar.make(
+            mActivity.findViewById(android.R.id.content), message,
+            if (listener != null) Snackbar.LENGTH_INDEFINITE else Snackbar.LENGTH_SHORT)
+            .setAction(getString(android.R.string.ok), listener)
             .show()
     }
 
