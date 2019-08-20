@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        changeFragment(WeatherFragment.newInstance())
+        changeFragment(WeatherFragment.newInstance("paris"))
     }
 
     fun changeFragment(fragment: Fragment) {
