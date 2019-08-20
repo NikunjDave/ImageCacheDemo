@@ -5,7 +5,7 @@ import com.weatherapp.network.ApiService
 import io.reactivex.disposables.CompositeDisposable
 import java.lang.ref.WeakReference
 
- abstract class  BaseViewModel<N : BaseNavigtor> : ViewModel() {
+ abstract class  BaseViewModel<N : BaseNavigator> : ViewModel() {
 
      private val mIsLoading = MutableLiveData<Boolean>()
      private var mNavigator: WeakReference<N>? = null

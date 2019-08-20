@@ -1,4 +1,5 @@
 package com.weatherapp.network
+import com.weatherapp.BuildConfig
 import com.weatherapp.model.ResponseForecast
 import com.weatherapp.model.ResponseLocation
 import io.reactivex.Single
@@ -32,14 +33,14 @@ interface ApiService {
         }
 
 
-        private val weather_bsae_url = "http://api.apixu.com/v1/"
+       // private val weather_bsae_url = "http://api.apixu.com/v1/"
 
         //   private val BASE_URL = "http://aonecoderz.com/event/api/"
         fun create(): ApiService {
             val retrofit = Builder()
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(weather_bsae_url)
+                .baseUrl(BuildConfig.BASE_URL)
                 .client(provideOkHttpClient())
                 .build()
             // retrofit.client().interceptors().add(LoggingInterceptor())

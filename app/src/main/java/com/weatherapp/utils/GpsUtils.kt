@@ -8,16 +8,13 @@ import android.widget.Toast
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
+import com.weatherapp.u.Constants
 
 class GpsUtils(private val context: Context?) {
     private var mSettingsClient: SettingsClient
     private var mLocationSettingsRequest: LocationSettingsRequest
     private  var locationManager: LocationManager
     private var locationRequest: LocationRequest
-
-    companion object{
-        public val GPS_REQUEST = 1001;
-    }
 
 
     init {
@@ -34,6 +31,7 @@ class GpsUtils(private val context: Context?) {
 
         //**************************
         builder.setAlwaysShow(true) //this is the key ingredient
+
         //**************************
     }
 
@@ -47,6 +45,8 @@ class GpsUtils(private val context: Context?) {
                 .checkLocationSettings(mLocationSettingsRequest)
                 .addOnSuccessListener(context as Activity) {
                     //  GPS is already enable, callback GPS status through listener
+                    Logger.d("on ok click")
+
                     onGpsListener?.gpsStatus(true)
                 }
                 .addOnFailureListener(context) { e ->
@@ -58,7 +58,7 @@ class GpsUtils(private val context: Context?) {
                                 // Show the dialog by calling startResolutionForResult(), and check the
                                 // result in onActivityResult().
                                 val rae = e as ResolvableApiException
-                                rae.startResolutionForResult(context,GPS_REQUEST)
+                                rae.startResolutionForResult(context,Constants.GPS_REQUEST)
                             } catch (sie: IntentSender.SendIntentException) {
                                 Logger.d("PendingIntent unable to execute request.")
                             }

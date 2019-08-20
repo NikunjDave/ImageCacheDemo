@@ -34,5 +34,6 @@ ext{
     lifecycleVersion = '2.0.0'
     retrofitVersion  = '2.1.0'
     playServicesVersion = "17.0.0"
+    androidxFragmentVersion = "1.1.0-rc01"
 }
 

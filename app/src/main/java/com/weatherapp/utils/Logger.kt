@@ -10,6 +10,9 @@ class Logger {
         fun e(format: String) {
             Log.e(TAG, format)
         }
+        fun i(format: String) {
+            Log.e(TAG, format)
+        }
 
     }
 }

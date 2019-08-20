@@ -5,10 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.weatherapp.R
-import com.weatherapp.model.Weather
+import com.weatherapp.model.ForecastDay
+import com.weatherapp.utils.MyUtils
 import kotlinx.android.synthetic.main.layout_item_temperature.view.*
 
-class WeatherAdapter(private val list: ArrayList<Weather>) :
+class WeatherAdapter(private val forecastList: List<ForecastDay>?) :
     RecyclerView.Adapter<WeatherAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -17,14 +18,20 @@ class WeatherAdapter(private val list: ArrayList<Weather>) :
     }
 
     override fun getItemCount(): Int {
-        return list.count()
+        return forecastList?.count() ?: 0
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val item = list[position]
-        holder.itemView.tvDay.text = item.day
-        holder.itemView.tvDayTemperature.text = item.temperature
+        val item = forecastList?.get(position)
+        if (item != null) {
+            val dayName = MyUtils.getDayFromDate(item.date)
+            holder.itemView.tvDay.text = dayName
+            val strTemp = MyUtils.formatTemperature(item.day?.avgtemp_c)
+            holder.itemView.tvDayTemperature.text = strTemp.plus("C")
+        }
     }
 
     class MyViewHolder(private val rowView: View) : RecyclerView.ViewHolder(rowView)
+
+
 }

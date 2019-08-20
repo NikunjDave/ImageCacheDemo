@@ -20,11 +20,21 @@ android {
     buildTypes {
 
         debug {
+            debuggable true
+            minifyEnabled false
+            useProguard false
         }
         release {
+            debuggable false
             minifyEnabled true
+            useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'BASE_URL',"\"http://api.apixu.com/v1/\""
+        it.buildConfigField 'String', 'API_TOKEN', "\"82659140320e4d15aad123558191408\""
     }
 }
 
@@ -54,6 +64,11 @@ dependencies {
 
     implementation "com.squareup.okhttp3:logging-interceptor:4.0.1"
     implementation "com.google.android.gms:play-services-location:$rootProject.playServicesVersion"
+    // Espresso
 
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.2.0'
+    androidTestImplementation 'androidx.fragment:fragment-testing:' + rootProject.androidxFragmentVersion
 
 }

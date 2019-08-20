@@ -4,6 +4,7 @@ object Constants {
     const val SUCCESS_RESULT = 0
 
     const val FAILURE_RESULT = 1
+    const val  GPS_REQUEST = 1001;
 
     private const val PACKAGE_NAME = "com.google.android.gms.location.sample.locationaddress"
 
