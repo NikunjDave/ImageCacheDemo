@@ -1,4 +1,4 @@
-package com.test.gojek.utils
+package com.weatherapp.u
 
 object Constants {
     const val SUCCESS_RESULT = 0

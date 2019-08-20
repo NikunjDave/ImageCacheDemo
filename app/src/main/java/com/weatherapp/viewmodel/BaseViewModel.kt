@@ -1,8 +1,7 @@
-package com.test.gojek.viewmodel
-
+package com.weatherapp.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.hkuaapp.network.ApiService
+import com.weatherapp.network.ApiService
 import io.reactivex.disposables.CompositeDisposable
 import java.lang.ref.WeakReference
 

@@ -1,5 +1,4 @@
-package com.test.gojek.viewmodel
-
+package com.weatherapp.viewmodel
 interface BaseNavigtor {
     fun showLoading()
 }

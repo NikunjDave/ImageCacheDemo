@@ -1,7 +1,6 @@
-package com.hkuaapp.network
-
-import com.test.gojek.Model.ResponseLocation
-import com.test.gojek.network.LogInterceptor
+package com.weatherapp.network
+import com.weatherapp.model.ResponseForecast
+import com.weatherapp.model.ResponseLocation
 import io.reactivex.Single
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit.Builder
@@ -22,7 +21,7 @@ interface ApiService {
     @GET("forecast.json")
     fun getForecastWeather(@Query("key") key: String, @Query("q") city: String,@Query("days") days
     : Int):
-            Single<ResponseLocation>
+            Single<ResponseForecast>
 
 
     companion object {

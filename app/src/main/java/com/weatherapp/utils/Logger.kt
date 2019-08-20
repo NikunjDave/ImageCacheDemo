@@ -1,5 +1,3 @@
-package com.test.gojek.network
-
 import android.util.Log
 
 class Logger {
@@ -9,5 +7,9 @@ class Logger {
         fun d(format: String) {
             Log.d(TAG, format)
         }
+        fun e(format: String) {
+            Log.e(TAG, format)
+        }
+
     }
 }

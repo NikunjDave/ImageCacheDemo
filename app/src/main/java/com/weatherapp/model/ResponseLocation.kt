@@ -1,8 +1,7 @@
-package com.test.gojek.Model
-
+package com.weatherapp.model
 import com.google.gson.annotations.SerializedName
 
 class ResponseLocation {
     @SerializedName("location")
-    public val location : Location? = null
+    val currentlocation : CurrentLocation? = null
 }

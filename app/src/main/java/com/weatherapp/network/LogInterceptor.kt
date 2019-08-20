@@ -1,4 +1,4 @@
-package com.test.gojek.network
+package com.weatherapp.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

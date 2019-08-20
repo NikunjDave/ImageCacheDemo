@@ -1,11 +1,11 @@
-package com.test.gojek.ui
+package com.weatherapp.ui
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.test.gojek.Model.Weather
 import com.weatherapp.R
+import com.weatherapp.model.Weather
 import kotlinx.android.synthetic.main.layout_item_temperature.view.*
 
 class WeatherAdapter(private val list: ArrayList<Weather>) :

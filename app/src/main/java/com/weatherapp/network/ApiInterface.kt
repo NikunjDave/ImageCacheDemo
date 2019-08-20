@@ -1,6 +1,6 @@
-package com.hkuaapp.network
+package com.weatherapp.network
 
-import com.test.gojek.Model.Weather
+import com.weatherapp.model.Weather
 import io.reactivex.Single
 import retrofit2.http.GET
 
