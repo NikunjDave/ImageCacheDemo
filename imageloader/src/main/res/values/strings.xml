@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">imageloader</string>
+    <string name="no_network_connection_toast">Please check your internet connection.</string>
+</resources>
