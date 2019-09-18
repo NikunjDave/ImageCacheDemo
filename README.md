@@ -4,6 +4,6 @@ Android-ImageCaching
 * Caching images both app memory and disk.
 * more images will be loaded on scrolling.
 * Support orientation changes.
-* Dtail screen swipe to see next image.
+* On image detail screen swipe to see next image.
 * Can clear caches from  menu.
 
