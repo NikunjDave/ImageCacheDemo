@@ -1,6 +1,6 @@
 Android-ImageCaching
 =========================
-* Asynchnously loading images. 
+* Asynchronously loading images. 
 * Caching images in app memory and disk.
 * more images will be loaded on scrolling.
 * Support orientation changes.
